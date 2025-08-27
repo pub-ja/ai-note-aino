@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Message Styles</title>
+    <!-- Link all necessary stylesheets -->
+    <link rel="stylesheet" href="./asset/css/koreanair_styles_250723.css">
+    <link rel="stylesheet" href="./asset/css/koreanair_common_250723.css">
+    <link rel="stylesheet" href="./asset/css/reset.css">
+    <link rel="stylesheet" href="./asset/css/common.css">
+    <link rel="stylesheet" href="./asset/css/chatbot-design.css">
+    <style>
+        /* Add some basic styling for the showcase page itself */
+        body {
+            padding: 2em;
+            background-color: #fff;
+        }
+
+        .showcase-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .showcase-title {
+            font-size: 1.5em;
+            margin: 1.5em 0 1em 0;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 0.5em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="showcase-container">
+        <h1>Chatbot Message Style Guide</h1>
+
+        <!-- Wrap in a messages container to get the correct flex context -->
+        <div class="ka-chatbot__messages">
+
+            <!-- Text Message Type -->
+            <h2 class="showcase-title">Text Response</h2>
+            <div class="ka-chatbot__message ka-chatbot__message--received">
+                <div class="ka-chatbot__message-bubble">
+                    <div class="ka-chatbot__message-content">
+                        <p>안녕하세요! 대한항공 AI 챗봇입니다. 무엇을 도와드릴까요?</p>
+                    </div>
+                </div>
+                <div class="ka-chatbot__quick-replies">
+                    <button class="ka-chatbot__quick-reply">항공권 예매</button>
+                    <button class="ka-chatbot__quick-reply">수하물 규정</button>
+                    <button class="ka-chatbot__quick-reply">체크인 안내</button>
+                </div>
+            </div>
+            <div class="ka-chatbot__message ka-chatbot__message--sent">
+                <div class="ka-chatbot__message-bubble">
+                    <div class="ka-chatbot__message-content">
+                        <p>수하물 규정이 궁금해요.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- List Message Type -->
+            <h2 class="showcase-title">List Response</h2>
+            <div class="ka-chatbot__message ka-chatbot__message--received">
+                <div class="ka-chatbot__message-bubble">
+                    <div class="ka-chatbot__message-content">
+                        <p>대한항공 수하물 규정에 대해 알려드릴게요.</p>
+                        <ol class="ka-chatbot__message-list">
+                            <li><strong>휴대 수하물</strong>
+                                <ul>
+                                    <li>개수: 2개 (휴대용 가방 1개 + 개인 소지품 1개)</li>
+                                    <li>무게: 총합 10kg 이하</li>
+                                </ul>
+                            </li>
+                            <li><strong>위탁 수하물</strong>
+                                <ul>
+                                    <li>개수: 1개</li>
+                                    <li>무게: 32kg 이하</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="ka-chatbot__message-actions">
+                        <button class="ka-chatbot__action-button" title="도움이 됐어요">👍</button>
+                        <button class="ka-chatbot__action-button" title="도움이 안됐어요">👎</button>
+                    </div>
+                </div>
+                <div class="ka-chatbot__related-info">
+                    <h3 class="ka-chatbot__related-title">함께 알면 좋은 정보</h3>
+                    <a href="#" class="ka-chatbot__related-link">기내 반입 금지 물품</a>
+                    <a href="#" class="ka-chatbot__related-link">초과 수하물 요금</a>
+                </div>
+            </div>
+
+            <!-- Card Message Type -->
+            <h2 class="showcase-title">Card Response</h2>
+            <div class="ka-chatbot__message ka-chatbot__message--received">
+                <div class="ka-chatbot__message-bubble">
+                    <div class="ka-chatbot__message-content">
+                        <div class="ka-chatbot__message-card">
+                            <img src="https://via.placeholder.com/300x150"
+                                alt="Promotional image for a new destination">
+                            <div class="ka-chatbot__message-card-content">
+                                <h3>꿈의 여행지, 하와이 특가!</h3>
+                                <p>지금 바로 특별한 가격으로 하와이 항공권을 예약하세요.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ka-chatbot__quick-replies">
+                    <button class="ka-chatbot__quick-reply">자세히 보기</button>
+                    <button class="ka-chatbot__quick-reply">다른 특가 보기</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

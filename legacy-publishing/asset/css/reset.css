@@ -1,0 +1,225 @@
+@charset "utf-8";
+
+/* =================================== */
+/* Font Face */
+/* =================================== */
+
+@font-face {
+  font-family: 'HanjinGroupSans KR';
+  font-style: normal;
+  font-weight: 300;
+  src:
+    local('HanjinGroupSans-Light'),
+    url('../font/woff/HanjinGroupSans-Light.woff') format('woff'),
+    url('../font/woff2/HanjinGroupSans-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'HanjinGroupSans KR';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local('HanjinGroupSans-Regular'),
+    url('../font/woff/HanjinGroupSans-Regular.woff') format('woff'),
+    url('../font/woff2/HanjinGroupSans-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'HanjinGroupSans KR';
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local('HanjinGroupSans-Bold'),
+    url('../font/woff/HanjinGroupSans-Bold.woff') format('woff'),
+    url('../font/woff2/HanjinGroupSans-Bold.woff2') format('woff2');
+}
+
+/* =================================== */
+/* Common Styles */
+/* =================================== */
+
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overflow: auto;
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  word-break: break-word;
+  -webkit-text-size-adjust: none;
+  color: var(--color-text-body);
+}
+
+[lang*='ko'] body {
+  word-break: keep-all;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: 'HanjinGroupSans KR', 'Noto Sans', sans-serif, Verdana, Arial !important;
+}
+
+:lang(ko) body,
+:lang(ko) button,
+:lang(ko) input,
+:lang(ko) select,
+:lang(ko) textarea {
+  font-family: 'HanjinGroupSans KR', 'Noto Sans KR', 'Malgun Gothic', sans-serif !important;
+}
+
+:lang(ja) body,
+:lang(ja) button,
+:lang(ja) input,
+:lang(ja) select,
+:lang(ja) textarea {
+  font-family:
+    Meiryo,
+    YuGothic,
+    Yu Gothic UI,
+    Osaka,
+    sans-serif !important;
+}
+
+:lang(zh-CN) body,
+:lang(zh-CN) button,
+:lang(zh-CN) input,
+:lang(zh-CN) select,
+:lang(zh-CN) textarea {
+  font-family:
+    'Microsoft YaHei', 'Heiti SC', Verdana, PMingLiU, Arial, Helvetica, sans-serif !important;
+}
+
+:lang(zh-HK) body,
+:lang(zh-HK) button,
+:lang(zh-HK) input,
+:lang(zh-HK) select,
+:lang(zh-HK) textarea {
+  font-family:
+    'Microsoft JhengHei', 'Heiti  TC', Verdana, PMingLiU, Arial, Helvetica, sans-serif !important;
+}
+
+/* =================================== */
+/* Reset */
+/* =================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='search'],
+input[type='password'] {
+  word-break: normal;
+}
+
+button,
+input[type='text'],
+input[type='password'],
+select,
+textarea {
+  line-height: 1.5;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  display: none;
+}
+
+input[type="date"]::-moz-calendar-picker-indicator,
+input[type="time"]::-moz-calendar-picker-indicator {
+  opacity: 0;
+  display: none;
+}
+
+input[type="date"]::-ms-input-placeholder,
+input[type="time"]::-ms-input-placeholder {
+  opacity: 0;
+  display: none;
+}
+
+input,
+button {
+  -webkit-appearance: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+}
+
+:lang(ko) body,
+:lang(ko) button,
+:lang(ko) input,
+:lang(ko) select,
+:lang(ko) textarea {
+  font-family: 'HanjinGroupSans KR', 'Noto Sans KR', 'Malgun Gothic', sans-serif !important;
+}
+
+:lang(ja) body,
+:lang(ja) button,
+:lang(ja) input,
+:lang(ja) select,
+:lang(ja) textarea {
+  font-family:
+    Meiryo,
+    YuGothic,
+    Yu Gothic UI,
+    Osaka,
+    sans-serif !important;
+}
+
+:lang(zh-CN) body,
+:lang(zh-CN) button,
+:lang(zh-CN) input,
+:lang(zh-CN) select,
+:lang(zh-CN) textarea {
+  font-family:
+    'Microsoft YaHei', 'Heiti SC', Verdana, PMingLiU, Arial, Helvetica, sans-serif !important;
+}
+
+:lang(zh-HK) body,
+:lang(zh-HK) button,
+:lang(zh-HK) input,
+:lang(zh-HK) select,
+:lang(zh-HK) textarea {
+  font-family:
+    'Microsoft JhengHei', 'Heiti  TC', Verdana, PMingLiU, Arial, Helvetica, sans-serif !important;
+}

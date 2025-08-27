@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AI Chatbot</title>
+
+	<!-- 대한항공 css 와 충돌나지 않도록 임시로 넣은 css -->
+	<link rel="stylesheet" href="../2025_new/asset/css/koreanair_styles_250723.css">
+	<link rel="stylesheet" href="../2025_new/asset/css/koreanair_common_250723.css">
+	<!-- // 대한항공 css 와 충돌나지 않도록 임시로 넣은 css -->
+
+	<link rel="stylesheet" href="./asset/css/reset.css">
+	<link rel="stylesheet" href="./asset/css/common.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+	<div class="ka-chatbot-app-container">
+		<!-- 챗봇 컨테이너 -->
+		<div class="ka-chatbot">
+			<!-- 사이드바 -->
+			<div class="ka-chatbot__sidebar">
+				<div class="ka-chatbot__sidebar-header">
+					<button class="ka-chatbot__sidebar-toggle-button" aria-label="사이드바 토글">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+							<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+						</svg>
+					</button>
+					<span class="ka-chatbot__sidebar-title">AI Chatbot</span>
+				</div>
+				<nav class="ka-chatbot__sidebar-menu-nav">
+					<!-- 메뉴 아이템들 -->
+				</nav>
+			</div>
+
+			<!-- 메인 콘텐츠 영역 -->
+			<div class="ka-chatbot__main">
+				<div class="ka-chatbot__header">
+					<button class="ka-chatbot__header-menu-button" aria-label="메뉴 열기">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+							<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+						</svg>
+					</button>
+					<span class="ka-chatbot__title">AI Chatbot</span>
+					<div class="ka-chatbot__header-buttons">
+						<button class="ka-chatbot__header-button--fullscreen" aria-label="전체 화면">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+								<path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" />
+							</svg>
+						</button>
+						<button class="ka-chatbot__header-button--close" aria-label="챗봇 닫기">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+								<path
+									d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+							</svg>
+						</button>
+					</div>
+				</div>
+
+				<main class="ka-chatbot__body">
+					<!-- Initial Screen -->
+					<div class="ka-chatbot__initial-screen">
+						<div class="ka-chatbot__initial-screen-header">
+							<div class="ka-chatbot__korean-air-logo"></div>
+							<h2 class="ka-chatbot__initial-screen-title">대한항공 AI가<br>당신의 여정을 도와드릴게요</h2>
+						</div>
+						<!-- Swiper -->
+						<div class="ka-chatbot__swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="#" class="ka-chatbot__suggestion-card">
+										<h3>스카이패스</h3>
+										<p>모닝캄 프리미엄 클럽 클럽 회원자격 취득 조건은 무엇인가요?</p>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="ka-chatbot__suggestion-card">
+										<h3>체크인</h3>
+										<p>국제선 탑승 시 온라인 체크인은 언제부터 할 수 있나요?</p>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="ka-chatbot__suggestion-card">
+										<h3>마일리지</h3>
+										<p>대한항공 좌석 승급 보너스 항공권의 유효 기간은 어떻게 되나요?</p>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="ka-chatbot__suggestion-card">
+										<h3>기내식</h3>
+										<p>개인적으로 준비한 휴대 음식을 기내에서 먹을 수 있나요?</p>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="ka-chatbot__suggestion-card">
+										<h3>기내식</h3>
+										<p>기내에서 유아용 이유식 또는 액상분유를 데울 수 있나요?</p>
+									</a>
+								</div>
+							</div>
+							<!-- Add Pagination -->
+							<div class="swiper-pagination"></div>
+							<!-- Add Navigation -->
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+					</div>
+
+					<!-- Chat Messages -->
+					<div class="ka-chatbot__messages-wrapper -is-hidden" role="log" aria-live="polite" aria-relevant="additions"
+						aria-atomic="false">
+						<div class="ka-chatbot__messages">
+							<!-- 메시지가 여기에 추가됩니다 -->
+						</div>
+					</div>
+				</main>
+
+				<div class="ka-chatbot__input-area">
+					<textarea class="ka-chatbot__input" placeholder="무엇을 살펴볼까요?" rows="1"></textarea>
+					<button class="ka-chatbot__send-button" aria-label="메시지 전송">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+							<path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+						</svg>
+					</button>
+				</div>
+			</div>
+			<div class="ka-chatbot__overlay -is-hidden"></div>
+		</div>
+
+		<!-- 플로팅 챗봇 버튼 -->
+		<button class="ka-chatbot-fab" aria-label="챗봇 열기">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white">
+				<path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
+			</svg>
+		</button>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="./asset/script/common.js"></script>
+</body>
+</html>
